@@ -1,0 +1,42 @@
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+input {
+  width: 100%;
+  background-color: #ECECEC;
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  outline: none;
+  font-size: 0.9em;
+  padding: 16px 10px 10px;
+  font-weight: 600;
+  color: #343434;
+}
+
+button {
+  margin: 2rem;
+  border-radius: 10%;
+  padding: 2rem;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+button:hover,
+button:focus {
+  background-color: red;
+  transition: 0.25s;
+}
+
+label{
+  margin: 1.25rem;
+}
+
+span{
+  color: #fff;
+}
