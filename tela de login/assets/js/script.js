@@ -1,16 +1,24 @@
 var nome = "Bruno";
-var passoword = "1234";
+var senha = "1234";
 var inputNome = document.querySelector("#inputNome");
 var inputSenha = document.querySelector("#inputSenha");
-
+var tentativaAtual = 1;
+var maximoTentativas = 3;
 
 function verificar() {
-  if (inputNome.value == nome && inputSenha.value == passoword) {
-
-    alert("Bem-vindo")
+  if (inputNome.value === nome && inputSenha.value === senha) {
+    alert("Bem-vindo, " + nome);
+  } else {
+    if (tentativaAtual === maximoTentativas) {
+      alert("Número permitido de tentativas ultrapassado!");
+      alert("Faça seu login mais tarde!");
+      window.close(); // Fecha a página atual
+    } else {
+      alert("Acesso negado. Tente novamente");
+    }
+    tentativaAtual++;
   }
-  else { alert("acesso negado") }
 }
 
 var button = document.querySelector("button");
-button.onclick = (verificar)
+button.addEventListener("click", verificar);
